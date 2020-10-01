@@ -113,7 +113,7 @@ public class VentanaJuego extends JFrame{
 				public void run() {
 				while (true) {
 					coche.mueve(60);
-					if ( coche.getPosY()<0 || coche.getPosY()+100>VentanaJuego.this.getHeight()) {
+					if ( coche.getPosY()-50<0 || coche.getPosY()+50>VentanaJuego.this.getPanelPrincipal().getHeight()) {
 						System.out.println(coche.miDireccionActual);
 							coche.setMiDireccionActual(360-coche.getMiDireccionActual());
 							System.out.println(coche.miDireccionActual);
@@ -186,6 +186,10 @@ public class VentanaJuego extends JFrame{
 		
 		
 		
+	}
+	
+	public JPanel getPanelPrincipal() {
+		return panelPrincipal;
 	}
 	
 	
